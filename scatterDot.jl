@@ -17,7 +17,7 @@ import Statistics
     return result
 end
 
-N=100000000
+N=120000000
 nt = nthreads()
 println("The number of threads : $nt")
 println("N is: $N")

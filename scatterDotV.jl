@@ -21,7 +21,7 @@ function findRemainder(num,thread)
     return convert(Int64,num%thread)
 end
 
-N=100000001
+N=120000001
 nt = nthreads()
 println("The number of threads : $nt")
 println("N is: $N")

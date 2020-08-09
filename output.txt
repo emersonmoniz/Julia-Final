@@ -1,0 +1,64 @@
+The number of threads : 1
+N is: 120000001
+The sum for all dot products is: 480000004
+The elapsed time : 0.836514949798584 seconds
+
+real	0m2.116s
+user	0m1.705s
+sys	0m1.131s
+The number of threads : 2
+N is: 120000001
+The sum for all dot products is: 480000004
+The elapsed time : 0.46730148792266846 seconds
+
+real	0m2.263s
+user	0m1.807s
+sys	0m1.191s
+The number of threads : 4
+N is: 120000001
+The sum for all dot products is: 480000004
+The elapsed time : 0.21925097703933716 seconds
+
+real	0m2.181s
+user	0m1.816s
+sys	0m1.112s
+The number of threads : 6
+N is: 120000001
+The sum for all dot products is: 480000004
+The elapsed time : 0.16573166847229004 seconds
+
+real	0m2.293s
+user	0m1.850s
+sys	0m1.195s
+The number of threads : 1
+N is: 120000000
+The sum for all dot products is: 480000000
+The elapsed time : 0.8650720119476318 seconds
+
+real	0m1.908s
+user	0m1.521s
+sys	0m1.118s
+The number of threads : 2
+N is: 120000000
+The sum for all dot products is: 480000000
+The elapsed time : 0.4676849842071533 seconds
+
+real	0m2.331s
+user	0m1.925s
+sys	0m1.141s
+The number of threads : 4
+N is: 120000000
+The sum for all dot products is: 480000000
+The elapsed time : 0.24956995248794556 seconds
+
+real	0m2.295s
+user	0m1.917s
+sys	0m1.126s
+The number of threads : 6
+N is: 120000000
+The sum for all dot products is: 480000000
+The elapsed time : 0.14710712432861328 seconds
+
+real	0m2.131s
+user	0m1.734s
+sys	0m1.151s
