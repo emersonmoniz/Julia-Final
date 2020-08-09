@@ -1,10 +1,11 @@
 #!/bin/bash
 #PBS -l nodes=1:ppn=12
 #PBS -l walltime=00:01:30
-#PBS -q debug
-#PBS -N first
+#PBS -q batch
+#PBS -N run
 #PBS -j oe
 
 cd ~/Test
-for n in 1 2 4; do time JULIA_NUM_THREADS=$n julia scatterDotV.jl \n; done
-#for n in 1 2 4; do time JULIA_NUM_THREADS=$n julia scatterDot.jl \n; done
+for n in 1 2 4 6; do time JULIA_NUM_THREADS=$n julia scatterDotV.jl \n; done
+#time JULIA_NUM_THREADS=4 julia scatterDotV.jl 
+for n in 1 2 4; do time JULIA_NUM_THREADS=$n julia scatterDot.jl \n; done

@@ -1,7 +1,9 @@
 using Base.Threads;
+using Distributed;
+
 import Statistics
 
-function computeDotProduct(N)
+@everywhere function computeDotProduct(N)
     #=
     Computes dot product of N
     Returns the sum of Dot Product
@@ -19,7 +21,7 @@ function findRemainder(num,thread)
     return convert(Int64,num%thread)
 end
 
-N=10000001
+N=100000001
 nt = nthreads()
 println("The number of threads : $nt")
 println("N is: $N")
@@ -29,7 +31,7 @@ numS = N/nt
 numS = floor(numS)
 numS = convert(Int64,numS)
 remainder = findRemainder(N,nt)
-@threads for i=1:nt
+@sync @distributed for i=1:nt
     timestart = time()
     if i == nt
         global numS += remainder
@@ -38,7 +40,6 @@ remainder = findRemainder(N,nt)
     timeZ[i] = time() -timestart
 end
 elapsed = Statistics.mean(timeZ)
-#totalResult= 
 totalResult = convert(Int64,sum(smallDotProducts))
 println("The sum for all dot products is: $totalResult")
 println("The elapsed time : $elapsed seconds")
